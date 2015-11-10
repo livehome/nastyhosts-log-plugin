@@ -1,6 +1,6 @@
 {
   "name": "nastyhosts-log-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Log requests for further analysis",
   "main": "index.js",
   "scripts": {
