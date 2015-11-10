@@ -5,6 +5,9 @@ module.exports = function(app, config) {
     const res_send = res.send.bind(res);
     res.send = function(data) {
       res_send.call(this, data);
+      if(data instanceof Object) {
+        data = JSON.stringify(data);
+      }
       fs.stat("log.txt", function(err, stats) {
         if(err || stats.size < 20*1024*1024) {
           const log = JSON.stringify({
