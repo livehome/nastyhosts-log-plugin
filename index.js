@@ -13,6 +13,7 @@ module.exports = function(app, config) {
           const log = JSON.stringify({
               timestamp: Date.now(),
               params: req.params,
+              query: req.query,
               data
           });
           fs.appendFile("log.txt", log+"\n");
